@@ -45,12 +45,17 @@ Adjust the `pom.xml` file to specifically list the desired repositories, and add
 ```
 ## Step 3
 
-Add the `gradle-application-plugin` as an explicit dependency in the `pom.xml`:
+Add the `gradle-application-plugin` as an explicit dependency in the `pom.xml`, and the Mockito test module, if it wasn't already included:
 ```
 <dependency>
     <groupId>io.quarkus</groupId>
     <artifactId>gradle-application-plugin</artifactId>
     <version>${quarkus.platform.version}</version>
+</dependency>   
+<dependency>
+    <groupId>io.quarkus</groupId>
+    <artifactId>quarkus-junit5-mockito</artifactId>
+    <scope>test</scope>
 </dependency>   
 ```
 ## Step 4
